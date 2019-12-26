@@ -124,7 +124,7 @@ extension TravelLocationMapVC: MKMapViewDelegate {
         mapView.deselectAnnotation(view.annotation, animated: true)
         let lat = view.annotation?.coordinate.latitude
         let lon = view.annotation?.coordinate.longitude
-        //print("The selected pin's lat:\(String(describing: lat)), lon:\(String(describing: lon))")
+//        print("The selected pin's lat:\(String(describing: lat)), lon:\(String(describing: lon))")
         let fetchRequest:NSFetchRequest<Pin> = Pin.fetchRequest()
         do {
             let searchResults = try context.fetch(fetchRequest)

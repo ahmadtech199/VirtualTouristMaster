@@ -46,12 +46,12 @@ class FlickerClient  {
                 DispatchQueue.main.async{
                 let photosDictionary: JSON = JSON(response.result.value!)
                 let photosArray: JSON = updateResult(json: photosDictionary)
-                // print("Successful request Flicker Dictionairy!")
+//                 print("Successful request Flicker Dictionairy!")
                 let context = appDelegate.getContext()
         
                     var imageUrlStrings = [Photo]()
                     for item in photosArray.arrayValue {
-                    //print(item[Constants.FlickrParameterValues.MediumURL].stringValue)
+                    print(item[Constants.FlickrParameterValues.MediumURL].stringValue)
                     let urlString = item[Constants.FlickrParameterValues.MediumURL].stringValue
 
                     let photo:Photo = NSEntityDescription.insertNewObject(forEntityName: "Photo", into: context ) as! Photo
@@ -88,21 +88,6 @@ class FlickerClient  {
         //print("Get Data!")
             completionHandler(response.data, nil)
         }
-            
+        }
     }
-}
-//        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-//            guard error == nil else {
-//                completionHandler(nil, error?.localizedDescription as? Error)
-//                return
-//            }
-//            DispatchQueue.main.async {
-//            //print("Get Data!")
-//            completionHandler(data, nil)
-//            }
-//
-//        })
-//        task.resume()
-//   }
-
 }

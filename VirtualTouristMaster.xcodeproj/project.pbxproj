@@ -117,10 +117,10 @@
 		E0D0D69523AD13500073B461 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E03264F323AE61D800C3FC36 /* HelperMethods.swift */,
 				E0D0D69623AD15970073B461 /* PhotoAlbumVC.swift */,
 				E03264ED23AE500000C3FC36 /* FlickerImageCell.swift */,
 				E0D0D69823AD15ED0073B461 /* TravelLocationMapVC.swift */,
-				E03264F323AE61D800C3FC36 /* HelperMethods.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
