@@ -25,7 +25,7 @@ class TravelLocationMapVC: UIViewController {
         super.viewDidLoad()
         deletePinsOutlet.setTitle("Delete Pins!", for: .normal)
         deletePinsOutlet.tintColor = UIColor.red
-
+        
         SVProgressHUD.dismiss()
         /* Initialize Long Press Gesture Recognizer */
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(addPin(gestureRecognizer:)))
@@ -76,10 +76,10 @@ class TravelLocationMapVC: UIViewController {
     }
     
     
- //MARK: - DeletePins
+    //MARK: - DeletePins
     
     @IBAction func deletePins(_ sender: Any) {
-
+        
         let pins =  context.deletedObjects
         for pin in pins {
             context.delete(pin)
@@ -98,11 +98,6 @@ class TravelLocationMapVC: UIViewController {
 // MARK: - MKMapViewDelegate Methods
 
 extension TravelLocationMapVC: MKMapViewDelegate {
-    
-    
-    
-   
-    
     
     //MARK: - LoadPins
     func loadPins(with request: NSFetchRequest<Pin> = Pin.fetchRequest()){

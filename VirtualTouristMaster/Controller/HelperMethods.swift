@@ -14,11 +14,11 @@ extension UIViewController {
     
     // Mark: -- Alert Method
     /***************************************************************/
+    
+    func raiseAlertView(withTitle: String, withMessage: String) {
         
-     func raiseAlertView(withTitle: String, withMessage: String) {
-            
-          let alertController = UIAlertController(title: withTitle, message: withMessage, preferredStyle: .alert)
-          alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-          present(alertController, animated: true)
-        }
+        let alertController = UIAlertController(title: withTitle, message: withMessage, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true)
+    }
 }

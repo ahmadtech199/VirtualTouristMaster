@@ -210,7 +210,7 @@ extension PhotoAlbumVC: UICollectionViewDelegate{
             //print(itemsSelected)
             cell.flickerImage.alpha = 0.25
         }
-    
+        
         if itemsSelected.count > 0 {
             newCollectionOutlet.setTitle("Delete", for: .normal)
             photosSelected = true
