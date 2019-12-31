@@ -21,18 +21,32 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="1PH-Rp-n7y"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVP-rj-6vu">
+                                <rect key="frame" x="0.0" y="625" width="375" height="42"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.82232064260563376" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="dHC-9q-GZv"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="deletePins:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mh7-oX-oUX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="yVP-rj-6vu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7bY-LO-OPb"/>
                             <constraint firstItem="h7r-J1-pBW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CPi-0u-8mS"/>
+                            <constraint firstItem="yVP-rj-6vu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SIo-Av-2AJ"/>
                             <constraint firstItem="h7r-J1-pBW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Vbb-Nh-r2x"/>
                             <constraint firstItem="h7r-J1-pBW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gcT-rA-Pv5"/>
+                            <constraint firstItem="yVP-rj-6vu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="j78-oj-UG3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h7r-J1-pBW" secondAttribute="trailing" id="tsg-3h-TaA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="P1a-X8-8ln"/>
                     <connections>
+                        <outlet property="deletePinsOutlet" destination="yVP-rj-6vu" id="gvO-Ww-pVO"/>
                         <outlet property="mapView" destination="h7r-J1-pBW" id="aFd-wq-FSM"/>
                         <segue destination="ojp-e9-q8M" kind="show" identifier="goToPhotoAlbum" id="Y02-IA-eIk"/>
                     </connections>

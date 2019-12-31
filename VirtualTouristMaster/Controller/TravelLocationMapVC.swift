@@ -19,9 +19,13 @@ class TravelLocationMapVC: UIViewController {
     var editState: Bool = false
     //IBOutlets :
     
+    @IBOutlet weak var deletePinsOutlet: UIButton!
     @IBOutlet weak var mapView: MKMapView!    //TravelLocationMapVC Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        deletePinsOutlet.setTitle("Delete Pins!", for: .normal)
+        deletePinsOutlet.tintColor = UIColor.red
+
         SVProgressHUD.dismiss()
         /* Initialize Long Press Gesture Recognizer */
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(addPin(gestureRecognizer:)))
@@ -70,10 +74,35 @@ class TravelLocationMapVC: UIViewController {
             PhotoAlbumVC.selectedPin = selectedPin
         }
     }
+    
+    
+ //MARK: - DeletePins
+    
+    @IBAction func deletePins(_ sender: Any) {
+
+        let pins =  context.deletedObjects
+        for pin in pins {
+            context.delete(pin)
+        }
+        do {
+            try context.save()
+            mapView.removeAnnotations(mapView.annotations)
+            self.mapView.reloadInputViews()
+        } catch {
+            print("Failed saving")
+        }
+    }
 }
+
+
 // MARK: - MKMapViewDelegate Methods
 
 extension TravelLocationMapVC: MKMapViewDelegate {
+    
+    
+    
+   
+    
     
     //MARK: - LoadPins
     func loadPins(with request: NSFetchRequest<Pin> = Pin.fetchRequest()){
@@ -124,7 +153,7 @@ extension TravelLocationMapVC: MKMapViewDelegate {
         mapView.deselectAnnotation(view.annotation, animated: true)
         let lat = view.annotation?.coordinate.latitude
         let lon = view.annotation?.coordinate.longitude
-//        print("The selected pin's lat:\(String(describing: lat)), lon:\(String(describing: lon))")
+        print("The selected pin's lat:\(String(describing: lat)), lon:\(String(describing: lon))")
         let fetchRequest:NSFetchRequest<Pin> = Pin.fetchRequest()
         do {
             let searchResults = try context.fetch(fetchRequest)
