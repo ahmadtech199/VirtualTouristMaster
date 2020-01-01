@@ -31,9 +31,16 @@ First you have an empty map, to add a pin to a location you can just hold press 
 
 ### App UI
 
+# Reload Photo
 ![](https://media.giphy.com/media/U1UISbYaZDeBuOO28x/giphy.gif)
+
+# Delete Pins from Map
 ![](https://media.giphy.com/media/jUE7pNnaNdrIxEW8De/giphy.gif)
+
+# Add Pin in Map
 ![](https://media.giphy.com/media/IfsWG1OvofNcuVJizo/giphy.gif)
+
+# Delete Photo from Collection
 ![](https://media.giphy.com/media/jPAuQShcNpveyD4XRK/giphy.gif)
 
 ## Built With
