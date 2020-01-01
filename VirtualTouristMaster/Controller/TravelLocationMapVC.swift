@@ -19,12 +19,9 @@ class TravelLocationMapVC: UIViewController {
     var editState: Bool = false
     //IBOutlets :
     
-    @IBOutlet weak var deletePinsOutlet: UIButton!
     @IBOutlet weak var mapView: MKMapView!    //TravelLocationMapVC Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        deletePinsOutlet.setTitle("Delete Pins!", for: .normal)
-        deletePinsOutlet.tintColor = UIColor.red
         
         SVProgressHUD.dismiss()
         /* Initialize Long Press Gesture Recognizer */

@@ -15,39 +15,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h7r-J1-pBW">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="33y-kF-d7q">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1PH-Rp-n7y"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Gjm-uG-JUv"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVP-rj-6vu">
-                                <rect key="frame" x="0.0" y="625" width="375" height="42"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.82232064260563376" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="dHC-9q-GZv"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="deletePins:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mh7-oX-oUX"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="yVP-rj-6vu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7bY-LO-OPb"/>
-                            <constraint firstItem="h7r-J1-pBW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CPi-0u-8mS"/>
-                            <constraint firstItem="yVP-rj-6vu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SIo-Av-2AJ"/>
-                            <constraint firstItem="h7r-J1-pBW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Vbb-Nh-r2x"/>
-                            <constraint firstItem="h7r-J1-pBW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gcT-rA-Pv5"/>
-                            <constraint firstItem="yVP-rj-6vu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="j78-oj-UG3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h7r-J1-pBW" secondAttribute="trailing" id="tsg-3h-TaA"/>
+                            <constraint firstItem="33y-kF-d7q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CG1-cK-9X8"/>
+                            <constraint firstItem="33y-kF-d7q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="U8c-qL-vJX"/>
+                            <constraint firstItem="33y-kF-d7q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vq4-eV-R4N"/>
+                            <constraint firstItem="33y-kF-d7q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="a2y-nx-5rg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="P1a-X8-8ln"/>
+                    <navigationItem key="navigationItem" id="P1a-X8-8ln">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="zpt-HB-9Td">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="okR-dx-nUN">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear Map"/>
+                                <connections>
+                                    <action selector="deletePins:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sn7-zR-TAM"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="deletePinsOutlet" destination="yVP-rj-6vu" id="gvO-Ww-pVO"/>
-                        <outlet property="mapView" destination="h7r-J1-pBW" id="aFd-wq-FSM"/>
+                        <outlet property="mapView" destination="33y-kF-d7q" id="FtR-3j-Y4Z"/>
                         <segue destination="ojp-e9-q8M" kind="show" identifier="goToPhotoAlbum" id="Y02-IA-eIk"/>
                     </connections>
                 </viewController>
