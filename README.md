@@ -31,8 +31,10 @@ First you have an empty map, to add a pin to a location you can just hold press 
 
 ### App UI
 
+![](https://media.giphy.com/media/U1UISbYaZDeBuOO28x/giphy.gif)
 ![](https://media.giphy.com/media/jUE7pNnaNdrIxEW8De/giphy.gif)
 ![](https://media.giphy.com/media/IfsWG1OvofNcuVJizo/giphy.gif)
+![](https://media.giphy.com/media/jPAuQShcNpveyD4XRK/giphy.gif)
 
 ## Built With
 * [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) - To deal with JSON data in Swift.
